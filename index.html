@@ -1484,9 +1484,9 @@
         </div>
          
         <div id="controls-row">
-            <button id="play-button">Přehrát</button>
-            <button id="stop-button">Zastavit</button>
-            <button id="pause-button">Pozastavit Odpočet</button>
+            <button id="play-button">▶️</button>
+            <button id="stop-button">⏹️</button>
+            <button id="pause-button">⏸️⏳</button>
             <input type="range" id="volume-control" min="0" max="1" step="0.00001" value="0.01">
             <div id="fullscreen-button" class="fullscreen-button">
                 <span class="fullscreen-icon">↔</span> 
@@ -1737,7 +1737,7 @@ function loadQuestion() {
 
     // Inicializace tlačítek pauzy
     pauseButton = document.getElementById('pause-button');
-    pauseButton.textContent = 'Pozastavit Odpočet';
+    pauseButton.textContent = '⏸️⏳';
     isPaused = false;
 
     console.log(`Otázka č. ${currentQuestion + 1} načtena a zobrazena`);
@@ -1959,7 +1959,7 @@ function updateScorePercentage() {
 // Funkce pro pozastavení/obnovení časovače
 function togglePause() {
     isPaused = !isPaused;
-    pauseButton.textContent = isPaused ? 'Pokračovat' : 'Pozastavit Odpočet';
+    pauseButton.textContent = isPaused ? '▶️⏳' : '⏸️⏳';
     console.log(isPaused ? 'Kvíz pozastaven' : 'Kvíz pokračuje');
 }
 
