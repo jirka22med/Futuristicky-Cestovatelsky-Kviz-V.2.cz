@@ -44,8 +44,8 @@
             width: 1980px;
             margin: auto;
             display: none;
-            background: rgba(255, 255, 255, 0.05);
-            box-shadow: 0 0 20px rgba(0, 255, 234, 0.5);
+            /*background: rgba(255, 255, 255, 0.05);*/
+           /* box-shadow: 0 0 20px rgba(0, 255, 234, 0.5);*/
         }
 
         h1 {
@@ -70,10 +70,10 @@
             flex-direction: column;
             justify-content: center;
             margin-bottom: 20px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+           /* box-shadow: 0 0 10px rgba(0,0,0,0.1);*/
             opacity: 1;
             transition: opacity 0.5s ease;
-            background: rgba(0, 255, 234, 0.05);
+            /*background: rgba(0, 255, 234, 0.05);*/
             border-radius: 12px;
             padding: 15px;
         }
@@ -99,13 +99,13 @@
             object-fit: contain;
             border-radius: 12px;
             margin-bottom: 15px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            border: 4px solid #00ffea;
+           /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);*/
+             border: 4px solid #00ffea;*/
             transition: transform 0.3s ease;
         }
 
         .question-image:hover {
-            box-shadow: 0 8px 16px rgba(0, 255, 234, 0.4);
+            /*box-shadow: 0 8px 16px rgba(0, 255, 234, 0.4);*/
         }
 
         .answers-container {
@@ -543,133 +543,792 @@
             display: none !important;
         }
 
-        @media screen and (max-width: 768px) {
-            body {
-                font-size: 14px;
-                padding: 5px;
-                margin: 0;
-                background-color: #1a1a2e;
-                color: #16e0bd;
-            }
+        /* Velmi velká obrazovka (2K, 4K monitory) */
+/* Velmi velká obrazovka (2K, 4K monitory) */
+@media screen and (min-width: 1920px) {
+    #quiz-container {
+        width: 1800px;
+        padding: 30px;
+    }
+    
+    h1 {
+        font-size: 3em;
+        margin-bottom: 30px;
+    }
+    
+    .question-text {
+        font-size: 1.5em;
+        margin-bottom: 25px;
+    }
+    
+    .answer-button {
+        padding: 16px;
+        font-size: 1.2em;
+    }
+    
+    #stats-display-container {
+        font-size: 1.2em;
+    }
+    
+    .question-image {
+        max-height: 50vh;
+    }
+}
 
-            #quiz-container {
-                width: 100%;
-                max-width: 100%;
-                padding: 10px;
-                display: flex;
-                flex-direction: column;
-                height: 100vh;
-                justify-content: flex-start;
-            }
+ 
+/* Střední obrazovka (standardní desktopy) */
+@media screen and (min-width: 1200px) and (max-width: 1439px) {
+    #quiz-container {
+        width: 1100px;
+        padding: 20px;
+    }
+    
+    h1 {
+        font-size: 2.2em;
+        margin-bottom: 20px;
+    }
+    
+    .question-text {
+        font-size: 1.25em;
+        margin-bottom: 18px;
+    }
+    
+    .answer-button {
+        padding: 12px;
+        font-size: 1em;
+    }
+    
+    .question-image {
+        max-height: 40vh;
+    }
+}
 
-            h1 {
-                font-size: 1.6em;
-                margin-bottom: 10px;
-                text-align: center;
-            }
+/* Malá obrazovka (menší desktopy, notebooky) */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    #quiz-container {
+        width: 90%;
+        max-width: 950px;
+        padding: 18px;
+    }
+    
+    h1 {
+        font-size: 2em;
+        margin-bottom: 18px;
+    }
+    
+    .question-text {
+        font-size: 1.2em;
+        margin-bottom: 15px;
+    }
+    
+    .answer-button {
+        padding: 12px;
+        font-size: 0.95em;
+    }
+    
+    .answers-container {
+        grid-gap: 8px;
+    }
+    
+    .question-image {
+        max-height: 35vh;
+    }
+    
+    #stats-display-container {
+        font-size: 0.95em;
+        gap: 12px;
+    }
+}
 
-            .question-text {
-                font-size: 1.3em;
-                margin-bottom: 10px;
-                text-align: center;
-            }
+/* Velký tablet (landscape) */
+@media screen and (min-width: 769px) and (max-width: 991px) {
+    body {
+        font-size: 15px;
+        padding: 8px;
+    }
+    
+    #quiz-container {
+        width: 95%;
+        padding: 15px;
+    }
+    
+    h1 {
+        font-size: 1.8em;
+        margin-bottom: 15px;
+    }
+    
+    .question-text {
+        font-size: 1.15em;
+        margin-bottom: 12px;
+    }
+    
+    .answers-container {
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 10px;
+    }
+    
+    .answer-button {
+        padding: 10px;
+        font-size: 0.9em;
+        min-height: 45px;
+    }
+    
+    .question-image {
+        max-height: 30vh;
+        border: 3px solid #00ffea;
+    }
+    
+    #stats-display-container {
+        flex-wrap: wrap;
+        font-size: 0.9em;
+        gap: 8px;
+    }
+    
+    #controls-row {
+        gap: 10px;
+    }
+    
+    #play-button, #stop-button, #pause-button, #start-game-button {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+    
+    .fullscreen-button {
+        width: 35px;
+        height: 35px;
+        top: 15px;
+        right: 15px;
+    }
+    
+    .fullscreen-icon {
+        font-size: 20px;
+    }
+    
+    #results-table {
+        width: 95%;
+        font-size: 1em;
+        max-height: 400px;
+    }
+    
+    #results-table th, #results-table td {
+        padding: 12px;
+    }
+    
+    #final-score {
+        font-size: 1.6em;
+    }
+    
+    .final-grade {
+        font-size: 2em;
+    }
+    
+    .retry-btn {
+        font-size: 1.3em;
+        padding: 8px 16px;
+    }
+}
 
-            .question-image {
-                max-height: 25vh;
-                margin: 0 auto 10px;
-                display: block;
-                border: 2px solid #16e0bd;
-                border-radius: 10px;
-            }
+/* Střední tablet (portrait) */
+@media screen and (min-width: 601px) and (max-width: 768px) {
+    body {
+        font-size: 14px;
+        padding: 5px;
+        background-color: #1a1a2e;
+    }
+    
+    #quiz-container {
+        width: 98%;
+        padding: 12px;
+    }
+    
+    h1 {
+        font-size: 1.7em;
+        margin-bottom: 12px;
+    }
+    
+    .question-text {
+        font-size: 1.1em;
+        margin-bottom: 10px;
+    }
+    
+    .answers-container {
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 8px;
+    }
+    
+    .answer-button {
+        padding: 9px;
+        font-size: 0.85em;
+        min-height: 42px;
+    }
+    
+    .question-image {
+        max-height: 28vh;
+        border: 2px solid #16e0bd;
+    }
+    
+    #stats-display-container {
+        flex-direction: column;
+        gap: 6px;
+        font-size: 0.85em;
+    }
+    
+    #question-counter-display,
+    #correct-answers-display,
+    #incorrect-answers-display,
+    #score-percentage-display,
+    #timer-display {
+        width: 95%;
+    }
+    
+    #controls-row {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    #play-button, #stop-button, #pause-button, #start-game-button {
+        width: 95%;
+        padding: 9px;
+        font-size: 1em;
+    }
+    
+    .fullscreen-button {
+        width: 32px;
+        height: 32px;
+        top: 12px;
+        right: 12px;
+    }
+    
+    .fullscreen-icon {
+        font-size: 18px;
+    }
+    
+    #results-table {
+        width: 98%;
+        font-size: 0.9em;
+        max-height: 350px;
+    }
+    
+    #results-table th, #results-table td {
+        padding: 10px;
+    }
+    
+    #final-score {
+        font-size: 1.5em;
+    }
+    
+    .final-grade {
+        font-size: 1.8em;
+    }
+    
+    .retry-btn {
+        font-size: 1.2em;
+        padding: 7px 14px;
+    }
+}
 
-            .answers-container {
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);
-                grid-gap: 8px;
-                margin-bottom: 15px;
-            }
+/* Malý tablet / Velký mobil (landscape) */
+@media screen and (min-width: 481px) and (max-width: 600px) {
+    body {
+        font-size: 13px;
+        padding: 3px;
+        background-color: #1a1a2e;
+    }
+    
+    #quiz-container {
+        width: 100%;
+        padding: 10px;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    h1 {
+        font-size: 1.6em;
+        margin-bottom: 10px;
+    }
+    
+    .question-text {
+        font-size: 1.05em;
+        margin-bottom: 8px;
+    }
+    
+    .answers-container {
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 6px;
+        margin-bottom: 12px;
+    }
+    
+    .answer-button {
+        padding: 8px;
+        font-size: 0.8em;
+        min-height: 40px;
+    }
+    
+    .question-image {
+        max-height: 25vh;
+        border: 2px solid #16e0bd;
+    }
+    
+    #stats-display-container {
+        flex-direction: column;
+        gap: 4px;
+        font-size: 0.8em;
+    }
+    
+    #question-counter-display,
+    #correct-answers-display,
+    #incorrect-answers-display,
+    #score-percentage-display,
+    #timer-display {
+        width: 98%;
+        padding: 4px 8px;
+    }
+    
+    #controls-row {
+        flex-direction: column;
+        gap: 6px;
+    }
+    
+    #play-button, #stop-button, #pause-button, #start-game-button {
+        width: 98%;
+        padding: 8px;
+        font-size: 0.95em;
+    }
+    
+    .fullscreen-button {
+        width: 30px;
+        height: 30px;
+        top: 10px;
+        right: 10px;
+    }
+    
+    .fullscreen-icon {
+        font-size: 16px;
+    }
+    
+    #results-table {
+        width: 100%;
+        font-size: 0.8em;
+        max-height: 300px;
+    }
+    
+    #results-table th, #results-table td {
+        padding: 8px;
+    }
+    
+    #final-score {
+        font-size: 1.4em;
+    }
+    
+    .final-grade {
+        font-size: 1.6em;
+    }
+    
+    .retry-btn {
+        font-size: 1.1em;
+        padding: 6px 12px;
+    }
+}
 
-            .answer-button {
-                padding: 8px;
-                font-size: 0.8em;
-                height: auto;
-                min-height: 40px;
-                border-radius: 5px;
-                border: none;
-                background-color: #00FF00;
-                color: black;
-                font-weight: bold;
-            }
+/* Velký mobil (portrait) */
+@media screen and (min-width: 415px) and (max-width: 480px) {
+    body {
+        font-size: 12px;
+        padding: 2px;
+        margin: 0;
+        background-color: #1a1a2e;
+        color: #16e0bd;
+    }
+    
+    #quiz-container {
+        width: 100%;
+        padding: 8px;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    h1 {
+        font-size: 1.5em;
+        margin-bottom: 8px;
+    }
+    
+    .question-text {
+        font-size: 1em;
+        margin-bottom: 6px;
+    }
+    
+    .answers-container {
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 5px;
+        margin-bottom: 10px;
+    }
+    
+    .answer-button {
+        padding: 7px;
+        font-size: 0.75em;
+        min-height: 38px;
+    }
+    
+    .question-image {
+        max-height: 22vh;
+        border: 2px solid #16e0bd;
+    }
+    
+    #stats-display-container {
+        flex-direction: column;
+        gap: 3px;
+        font-size: 0.75em;
+    }
+    
+    #question-counter-display,
+    #correct-answers-display,
+    #incorrect-answers-display,
+    #score-percentage-display,
+    #timer-display {
+        width: 100%;
+        padding: 3px 6px;
+    }
+    
+    #controls-row {
+        flex-direction: column;
+        gap: 4px;
+    }
+    
+    #play-button, #stop-button, #pause-button, #start-game-button {
+        width: 100%;
+        padding: 7px;
+        font-size: 0.9em;
+    }
+    
+    .fullscreen-button {
+        width: 28px;
+        height: 28px;
+        top: 8px;
+        right: 8px;
+    }
+    
+    .fullscreen-icon {
+        font-size: 14px;
+    }
+    
+    #results-table {
+        width: 100%;
+        font-size: 0.75em;
+        max-height: 280px;
+    }
+    
+    #results-table th, #results-table td {
+        padding: 6px;
+    }
+    
+    #final-score {
+        font-size: 1.3em;
+    }
+    
+    .final-grade {
+        font-size: 1.5em;
+    }
+    
+    .retry-btn {
+        font-size: 1em;
+        padding: 5px 10px;
+    }
+}
 
-            .answer-button:hover {
-                background-color: olive;
-                transform: translateY(-2px);
-                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            }
+/* Střední mobil */
+@media screen and (min-width: 361px) and (max-width: 414px) {
+    body {
+        font-size: 11px;
+        padding: 1px;
+        margin: 0;
+        background-color: #1a1a2e;
+        color: #16e0bd;
+    }
+    
+    #quiz-container {
+        width: 100%;
+        padding: 6px;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    h1 {
+        font-size: 1.4em;
+        margin-bottom: 6px;
+    }
+    
+    .question-text {
+        font-size: 0.95em;
+        margin-bottom: 5px;
+    }
+    
+    .answers-container {
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 4px;
+        margin-bottom: 8px;
+    }
+    
+    .answer-button {
+        padding: 6px;
+        font-size: 0.7em;
+        min-height: 36px;
+    }
+    
+    .question-image {
+        max-height: 20vh;
+        border: 1px solid #16e0bd;
+    }
+    
+    #stats-display-container {
+        flex-direction: column;
+        gap: 2px;
+        font-size: 0.7em;
+    }
+    
+    #question-counter-display,
+    #correct-answers-display,
+    #incorrect-answers-display,
+    #score-percentage-display,
+    #timer-display {
+        width: 100%;
+        padding: 2px 4px;
+    }
+    
+    #controls-row {
+        flex-direction: column;
+        gap: 3px;
+    }
+    
+    #play-button, #stop-button, #pause-button, #start-game-button {
+        width: 100%;
+        padding: 6px;
+        font-size: 0.85em;
+    }
+    
+    .fullscreen-button {
+        width: 26px;
+        height: 26px;
+        top: 6px;
+        right: 6px;
+    }
+    
+    .fullscreen-icon {
+        font-size: 12px;
+    }
+    
+    #results-table {
+        width: 100%;
+        font-size: 0.7em;
+        max-height: 250px;
+    }
+    
+    #results-table th, #results-table td {
+        padding: 4px;
+    }
+    
+    #final-score {
+        font-size: 1.2em;
+    }
+    
+    .final-grade {
+        font-size: 1.4em;
+    }
+    
+    .retry-btn {
+        font-size: 0.9em;
+        padding: 4px 8px;
+    }
+}
 
-            .answer-button.correct {
-                background-color: green;
-                color: black;
-            }
+/* Malý mobil */
+@media screen and (max-width: 360px) {
+    body {
+        font-size: 10px;
+        padding: 0;
+        margin: 0;
+        background-color: #1a1a2e;
+        color: #16e0bd;
+    }
+    
+    #quiz-container {
+        width: 100%;
+        padding: 4px;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    h1 {
+        font-size: 1.3em;
+        margin-bottom: 4px;
+    }
+    
+    .question-text {
+        font-size: 0.9em;
+        margin-bottom: 4px;
+    }
+    
+    .answers-container {
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 3px;
+        margin-bottom: 6px;
+    }
+    
+    .answer-button {
+        padding: 5px;
+        font-size: 0.65em;
+        min-height: 34px;
+    }
+    
+    .question-image {
+        max-height: 18vh;
+        border: 1px solid #16e0bd;
+    }
+    
+    #stats-display-container {
+        flex-direction: column;
+        gap: 1px;
+        font-size: 0.65em;
+    }
+    
+    #question-counter-display,
+    #correct-answers-display,
+    #incorrect-answers-display,
+    #score-percentage-display,
+    #timer-display {
+        width: 100%;
+        padding: 1px 2px;
+    }
+    
+    #controls-row {
+        flex-direction: column;
+        gap: 2px;
+    }
+    
+    #play-button, #stop-button, #pause-button, #start-game-button {
+        width: 100%;
+        padding: 5px;
+        font-size: 0.8em;
+    }
+    
+    .fullscreen-button {
+        width: 24px;
+        height: 24px;
+        top: 4px;
+        right: 4px;
+    }
+    
+    .fullscreen-icon {
+        font-size: 10px;
+    }
+    
+    #results-table {
+        width: 100%;
+        font-size: 0.6em;
+        max-height: 200px;
+    }
+    
+    #results-table th, #results-table td {
+        padding: 2px;
+    }
+    
+    #final-score {
+        font-size: 1.1em;
+        margin-top: 10px;
+    }
+    
+    .final-grade {
+        font-size: 1.3em;
+        margin-top: 10px;
+    }
+    
+    .retry-btn {
+        font-size: 0.8em;
+        padding: 3px 6px;
+        margin-top: 10px;
+    }
+}
 
-            .answer-button.incorrect {
-                background-color: red;
-                color: black;
-            }
-
-            .answer-button.show-correct {
-                background-color: green;
-                color: black;
-            }
-
-            #stats-display-container {
-                flex-direction: column;
-                gap: 5px;
-                font-size: 0.9em;
-                margin-top: 5px;
-            }
-
-            #question-counter-display,
-            #correct-answers-display,
-            #incorrect-answers-display,
-            #score-percentage-display,
-            #timer-display {
-                width: 90%;
-                justify-content: space-between;
-            }
-
-            #controls-row {
-                flex-direction: column;
-                gap: 5px;
-            }
-
-            #play-button,
-            #stop-button,
-            #pause-button,
-            #start-game-button {
-                width: 90%;
-                padding: 8px;
-                font-size: 1.1em;
-                height: auto;
-                min-height: 30px;
-            }
-
-            #volume-control {
-                width: 80%;
-                margin-top: 10px;
-            }
-
-            .fullscreen-button {
-                top: 10px;
-                right: 120px;
-                width: 25px;
-                height: 25px;
-            }
-
-            .fullscreen-icon {
-                font-size: 17px;
-            }
-        }
+/* Orientace landscape pro mobily */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+    #quiz-container {
+        height: auto;
+        min-height: 100vh;
+        padding: 5px;
+    }
+    
+    h1 {
+        font-size: 1.2em;
+        margin-bottom: 5px;
+    }
+    
+    .question-text {
+        font-size: 0.9em;
+        margin-bottom: 5px;
+    }
+    
+    .question-image {
+        max-height: 20vh;
+    }
+    
+    .answers-container {
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 3px;
+    }
+    
+    .answer-button {
+        padding: 4px;
+        font-size: 0.7em;
+        min-height: 30px;
+    }
+    
+    #stats-display-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 2px;
+        font-size: 0.6em;
+    }
+    
+    #controls-row {
+        flex-direction: row;
+        gap: 3px;
+    }
+    
+    #play-button, #stop-button, #pause-button, #start-game-button {
+        width: auto;
+        padding: 3px 8px;
+        font-size: 0.7em;
+    }
+    
+    #results-table {
+        width: 100%;
+        font-size: 0.65em;
+        max-height: 180px;
+    }
+    
+    #results-table th, #results-table td {
+        padding: 2px;
+    }
+    
+    #final-score {
+        font-size: 1em;
+        margin-top: 8px;
+    }
+    
+    .final-grade {
+        font-size: 1.2em;
+        margin-top: 8px;
+    }
+    
+    .retry-btn {
+        font-size: 0.75em;
+        padding: 3px 6px;
+        margin-top: 8px;
+    }
+}
     </style>
 </head>
 <body>
