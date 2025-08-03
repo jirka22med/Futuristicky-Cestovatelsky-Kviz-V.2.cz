@@ -543,8 +543,7 @@
             display: none !important;
         }
 
-        /* Velmi velká obrazovka (2K, 4K monitory) */
-/* Velmi velká obrazovka (2K, 4K monitory) */
+       /* Velmi velká obrazovka (2K, 4K monitory) */
 @media screen and (min-width: 1920px) {
     #quiz-container {
         width: 1800px;
@@ -575,7 +574,33 @@
     }
 }
 
- 
+/* Velká obrazovka (desktopy) */
+/*@media screen and (min-width: 1440px) and (max-width: 1919px) {
+    #quiz-container {
+        width: 1400px;
+        padding: 25px;
+    }
+    
+    h1 {
+        font-size: 2.5em;
+        margin-bottom: 25px;
+    }
+    
+    .question-text {
+        font-size: 1.3em;
+        margin-bottom: 20px;
+    }
+    
+    .answer-button {
+        padding: 14px;
+        font-size: 1.1em;
+    }
+    
+    .question-image {
+        max-height: 45vh;
+    }
+}*/
+
 /* Střední obrazovka (standardní desktopy) */
 @media screen and (min-width: 1200px) and (max-width: 1439px) {
     #quiz-container {
@@ -679,9 +704,11 @@
     }
     
     #stats-display-container {
+        flex-direction: row;
         flex-wrap: wrap;
         font-size: 0.9em;
         gap: 8px;
+        justify-content: center;
     }
     
     #controls-row {
@@ -768,9 +795,11 @@
     }
     
     #stats-display-container {
-        flex-direction: column;
+        flex-direction: row;
+        flex-wrap: wrap;
         gap: 6px;
         font-size: 0.85em;
+        justify-content: center;
     }
     
     #question-counter-display,
@@ -778,7 +807,9 @@
     #incorrect-answers-display,
     #score-percentage-display,
     #timer-display {
-        width: 95%;
+        width: auto;
+        flex: 1;
+        min-width: 80px;
     }
     
     #controls-row {
@@ -871,9 +902,11 @@
     }
     
     #stats-display-container {
-        flex-direction: column;
+        flex-direction: row;
+        flex-wrap: wrap;
         gap: 4px;
         font-size: 0.8em;
+        justify-content: center;
     }
     
     #question-counter-display,
@@ -881,8 +914,10 @@
     #incorrect-answers-display,
     #score-percentage-display,
     #timer-display {
-        width: 98%;
-        padding: 4px 8px;
+        width: auto;
+        flex: 1;
+        min-width: 70px;
+        padding: 4px 6px;
     }
     
     #controls-row {
@@ -977,9 +1012,11 @@
     }
     
     #stats-display-container {
-        flex-direction: column;
+        flex-direction: row;
+        flex-wrap: wrap;
         gap: 3px;
         font-size: 0.75em;
+        justify-content: center;
     }
     
     #question-counter-display,
@@ -987,8 +1024,10 @@
     #incorrect-answers-display,
     #score-percentage-display,
     #timer-display {
-        width: 100%;
-        padding: 3px 6px;
+        width: auto;
+        flex: 1;
+        min-width: 60px;
+        padding: 3px 4px;
     }
     
     #controls-row {
@@ -1083,9 +1122,11 @@
     }
     
     #stats-display-container {
-        flex-direction: column;
+        flex-direction: row;
+        flex-wrap: wrap;
         gap: 2px;
         font-size: 0.7em;
+        justify-content: center;
     }
     
     #question-counter-display,
@@ -1093,8 +1134,10 @@
     #incorrect-answers-display,
     #score-percentage-display,
     #timer-display {
-        width: 100%;
-        padding: 2px 4px;
+        width: auto;
+        flex: 1;
+        min-width: 55px;
+        padding: 2px 3px;
     }
     
     #controls-row {
@@ -1189,9 +1232,11 @@
     }
     
     #stats-display-container {
-        flex-direction: column;
+        flex-direction: row;
+        flex-wrap: wrap;
         gap: 1px;
         font-size: 0.65em;
+        justify-content: center;
     }
     
     #question-counter-display,
@@ -1199,7 +1244,9 @@
     #incorrect-answers-display,
     #score-percentage-display,
     #timer-display {
-        width: 100%;
+        width: auto;
+        flex: 1;
+        min-width: 50px;
         padding: 1px 2px;
     }
     
@@ -1290,6 +1337,18 @@
         flex-wrap: wrap;
         gap: 2px;
         font-size: 0.6em;
+        justify-content: center;
+    }
+    
+    #question-counter-display,
+    #correct-answers-display,
+    #incorrect-answers-display,
+    #score-percentage-display,
+    #timer-display {
+        width: auto;
+        flex: 1;
+        min-width: 45px;
+        padding: 1px 2px;
     }
     
     #controls-row {
