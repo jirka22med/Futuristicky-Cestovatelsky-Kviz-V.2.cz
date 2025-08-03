@@ -543,7 +543,7 @@
             display: none !important;
         }
 
-       /* Velmi velká obrazovka (2K, 4K monitory) */
+ /* Velmi velká obrazovka (2K, 4K monitory) */
 @media screen and (min-width: 1920px) {
     #quiz-container {
         width: 1800px;
@@ -614,7 +614,7 @@
     }
     
     .question-text {
-        font-size: 1.25em;
+        font-size: 1.5em;
         margin-bottom: 18px;
     }
     
@@ -642,7 +642,7 @@
     }
     
     .question-text {
-        font-size: 1.2em;
+        font-size: 1.5em;
         margin-bottom: 15px;
     }
     
@@ -683,7 +683,7 @@
     }
     
     .question-text {
-        font-size: 1.15em;
+        font-size: 1.5em;
         margin-bottom: 12px;
     }
     
@@ -712,12 +712,23 @@
     }
     
     #controls-row {
+        flex-direction: row;
         gap: 10px;
+        justify-content: center;
+        align-items: center;
     }
     
     #play-button, #stop-button, #pause-button, #start-game-button {
-        padding: 10px 20px;
+        flex: 1;
+        min-width: 80px;
+        padding: 10px 15px;
         font-size: 0.9em;
+    }
+    
+    #volume-control {
+        flex: 1;
+        min-width: 100px;
+        margin: 0;
     }
     
     .fullscreen-button {
@@ -774,7 +785,7 @@
     }
     
     .question-text {
-        font-size: 1.1em;
+        font-size: 1.5em;
         margin-bottom: 10px;
     }
     
@@ -785,7 +796,7 @@
     
     .answer-button {
         padding: 9px;
-        font-size: 0.85em;
+        font-size: 0.95em;
         min-height: 42px;
     }
     
@@ -813,14 +824,23 @@
     }
     
     #controls-row {
-        flex-direction: column;
+        flex-direction: row;
         gap: 8px;
+        justify-content: center;
+        align-items: center;
     }
     
     #play-button, #stop-button, #pause-button, #start-game-button {
-        width: 95%;
-        padding: 9px;
+        flex: 1;
+        min-width: 70px;
+        padding: 9px 12px;
         font-size: 1em;
+    }
+    
+    #volume-control {
+        flex: 1;
+        min-width: 80px;
+        margin: 0;
     }
     
     .fullscreen-button {
@@ -880,7 +900,7 @@
     }
     
     .question-text {
-        font-size: 1.05em;
+        font-size: 1.5em;
         margin-bottom: 8px;
     }
     
@@ -892,7 +912,7 @@
     
     .answer-button {
         padding: 8px;
-        font-size: 0.8em;
+        font-size: 1.3em;
         min-height: 40px;
     }
     
@@ -921,14 +941,23 @@
     }
     
     #controls-row {
-        flex-direction: column;
+        flex-direction: row;
         gap: 6px;
+        justify-content: center;
+        align-items: center;
     }
     
-    #play-button, #stop-button, #pause-button, #start-game-button {
-        width: 98%;
-        padding: 8px;
+    #play-button, #stop-button, #pause-button  {
+        flex: 1;
+        min-width: 60px;
+        padding: 8px 10px;
         font-size: 0.95em;
+    }
+    
+    #volume-control {
+        flex: 1;
+        min-width: 70px;
+        margin: 0;
     }
     
     .fullscreen-button {
@@ -990,7 +1019,7 @@
     }
     
     .question-text {
-        font-size: 1em;
+        font-size: 1.5em;
         margin-bottom: 6px;
     }
     
@@ -1002,7 +1031,7 @@
     
     .answer-button {
         padding: 7px;
-        font-size: 0.75em;
+        font-size: 1.3em;
         min-height: 38px;
     }
     
@@ -1031,14 +1060,23 @@
     }
     
     #controls-row {
-        flex-direction: column;
+        flex-direction: row;
         gap: 4px;
+        justify-content: center;
+        align-items: center;
     }
     
-    #play-button, #stop-button, #pause-button, #start-game-button {
-        width: 100%;
-        padding: 7px;
+    #play-button, #stop-button, #pause-button  {
+        flex: 1;
+        min-width: 50px;
+        padding: 7px 8px;
         font-size: 0.9em;
+    }
+    
+    #volume-control {
+        flex: 1;
+        min-width: 60px;
+        margin: 0;
     }
     
     .fullscreen-button {
@@ -1095,12 +1133,12 @@
     }
     
     h1 {
-        font-size: 1.4em;
+        font-size: 1.5em;
         margin-bottom: 6px;
     }
     
     .question-text {
-        font-size: 0.95em;
+        font-size: 1.5em;
         margin-bottom: 5px;
     }
     
@@ -1112,7 +1150,7 @@
     
     .answer-button {
         padding: 6px;
-        font-size: 0.7em;
+        font-size: 1.3em;
         min-height: 36px;
     }
     
@@ -1141,14 +1179,23 @@
     }
     
     #controls-row {
-        flex-direction: column;
+        flex-direction: row;
         gap: 3px;
+        justify-content: center;
+        align-items: center;
     }
     
-    #play-button, #stop-button, #pause-button, #start-game-button {
-        width: 100%;
-        padding: 6px;
+    #play-button, #stop-button, #pause-button  {
+        flex: 1;
+        min-width: 45px;
+        padding: 6px 6px;
         font-size: 0.85em;
+    }
+    
+    #volume-control {
+        flex: 1;
+        min-width: 50px;
+        margin: 0;
     }
     
     .fullscreen-button {
@@ -1189,7 +1236,7 @@
 /* Malý mobil */
 @media screen and (max-width: 360px) {
     body {
-        font-size: 10px;
+        font-size: 11px;
         padding: 0;
         margin: 0;
         background-color: #1a1a2e;
@@ -1205,12 +1252,12 @@
     }
     
     h1 {
-        font-size: 1.3em;
+        font-size: 1.5em;
         margin-bottom: 4px;
     }
     
     .question-text {
-        font-size: 0.9em;
+        font-size: 1.2em;
         margin-bottom: 4px;
     }
     
@@ -1222,7 +1269,7 @@
     
     .answer-button {
         padding: 5px;
-        font-size: 0.65em;
+        font-size: 1.3em;
         min-height: 34px;
     }
     
@@ -1251,14 +1298,23 @@
     }
     
     #controls-row {
-        flex-direction: column;
+        flex-direction: row;
         gap: 2px;
+        justify-content: center;
+        align-items: center;
     }
     
-    #play-button, #stop-button, #pause-button, #start-game-button {
-        width: 100%;
-        padding: 5px;
-        font-size: 0.8em;
+    #play-button, #stop-button, #pause-button    {
+        flex: 1;
+        min-width: 40px;
+        padding: 5px 4px;
+        font-size: 0.9em;
+    }
+    
+    #volume-control {
+        flex: 1;
+        min-width: 45px;
+        margin: 0;
     }
     
     .fullscreen-button {
@@ -1308,12 +1364,12 @@
     }
     
     h1 {
-        font-size: 1.2em;
+        font-size: 1.5em;
         margin-bottom: 5px;
     }
     
     .question-text {
-        font-size: 0.9em;
+        font-size: 1.3em;
         margin-bottom: 5px;
     }
     
@@ -1328,7 +1384,7 @@
     
     .answer-button {
         padding: 4px;
-        font-size: 0.7em;
+        font-size: 1.3em;
         min-height: 30px;
     }
     
@@ -1354,12 +1410,21 @@
     #controls-row {
         flex-direction: row;
         gap: 3px;
+        justify-content: center;
+        align-items: center;
     }
     
-    #play-button, #stop-button, #pause-button, #start-game-button {
-        width: auto;
-        padding: 3px 8px;
-        font-size: 0.7em;
+    #play-button, #stop-button, #pause-button    {
+        flex: 1;
+        min-width: 35px;
+        padding: 3px 6px;
+        font-size: 0.9em;
+    }
+    
+    #volume-control {
+        flex: 1;
+        min-width: 40px;
+        margin: 0;
     }
     
     #results-table {
@@ -1417,7 +1482,7 @@
                 <div id="progress" value="0" max="100"></div>
             </div>
         </div>
-        
+         
         <div id="controls-row">
             <button id="play-button">Přehrát</button>
             <button id="stop-button">Zastavit</button>
